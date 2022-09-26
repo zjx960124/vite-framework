@@ -15,6 +15,9 @@ import router from "@/router/index";
 // pinia
 import { createPinia } from "pinia";
 
+//utils
+import directPlugin from '@/utils/directive/lazyPlugin';
+
 const app = createApp(App);
 
-app.use(router).use(createPinia()).use(ElementPlus).mount("#app");
+app.use(router).use(createPinia()).use(ElementPlus).use(directPlugin).mount("#app");

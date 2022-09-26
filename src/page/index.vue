@@ -5,14 +5,10 @@ const mainStore = useMainStore();
 
 <template>
   <div class="container">
-    <el-row :span="24" class="container-main">
-      <el-col :span="4">
-        <Navigation></Navigation>
-      </el-col>
-      <el-col :span="20" class="hook-view">
-        <router-view :name="mainStore.hook_active" />
-      </el-col>
-    </el-row>
+    <div class="container-main">
+      <div class="hook-list-view"><Navigation></Navigation></div>
+      <div class="hook-view"><router-view :name="mainStore.hook_active" /></div>
+    </div>
   </div>
 </template>
 
@@ -21,10 +17,22 @@ const mainStore = useMainStore();
   width: 100vw;
   height: 100vh;
   .container-main {
+    width: 100%;
     height: 100%;
+    display: flex;
+    .hook-list-view {
+      width: 0;
+      height: 100%;
+      flex: 1;
+      min-width: 300px;
+      flex-shrink: 0;
+    }
     .hook-view {
+      width: 0;
+      height: 100%;
+      flex: 5;
       box-sizing: border-box;
-      padding: 20px 5px;
+      overflow: hidden;
     }
   }
 }

@@ -15,7 +15,8 @@ export const constantRouterMap: Array<RouteRecordRaw> = [
           model: () => import("@/page/demo/model.vue"),
           magnify: () => import("@/page/demo/magnify.vue"),
           color: () => import("@/page/demo/color.vue"),
-          password: () => import('@/page/demo/password.vue')
+          password: () => import('@/page/demo/password.vue'),
+          imageLazy: () => import('@/page/demo/imageLazy.vue')
         }
       },
     ]
