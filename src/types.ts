@@ -7,3 +7,8 @@ export interface HttpResponse {
     [key: string]: any;
   };
 }
+
+export interface breadcrumbItem {
+  name: string;
+  path: string;
+}
